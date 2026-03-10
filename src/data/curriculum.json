@@ -1,0 +1,200 @@
+{
+  "phases": [
+    {
+      "id": "phase-1",
+      "title": "Phase 1: Foundational Framework - Command Line, OS, and Networking",
+      "track": "primary",
+      "labs": [
+        {
+          "id": "thm-linux-fund",
+          "title": "Linux Fundamentals (Parts 1-3)",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Corporate server pe bina GUI ke navigate karna. EDR ko alert kiye bina sensitive config files aur SSH keys dhundhne ke liye ye commands bahut zaroori hain."
+        },
+        {
+          "id": "thm-bash-scripting",
+          "title": "Bash Scripting",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "External pen-test mein hazaron IPs manually check karna impossible hai. Custom tool banakar network scan aur vulnerable targets ko text file mein output karne ke liye ye use hota hai."
+        },
+        {
+          "id": "thm-aoc-linux",
+          "title": "Advent of Cyber (Linux CLI)",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Web server access logs analyze karte waqt base64 encoded payloads decode karne aur attacker ki methodology samajhne ke liye."
+        },
+        {
+          "id": "thm-network-fund",
+          "title": "Network Fundamentals",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Internal network mein ghusne ke baad segmentation samajhna. Active Directory Domain Controllers kis subnet mein hain, ye identify karne mein madad karta hai."
+        },
+        {
+          "id": "thm-nmap",
+          "title": "Nmap",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Bug bounty mein public infrastructure par external footprinting karke exposed aur unpatched services (jaise purana SMB ya Apache server) dhundhna."
+        },
+        {
+          "id": "thm-how-web-works",
+          "title": "How The Web Works",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Burp Suite jaise proxy ke through web traffic intercept karke session cookies manipulate karna. Auth bypass vulnerabilities identify karne ka fundamental step."
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "title": "Phase 2: Blue Teaming and Security Operations",
+      "track": "secondary",
+      "labs": [
+        {
+          "id": "thm-soc-l1",
+          "title": "SOC Level 1 Path",
+          "platform": "TryHackMe",
+          "type": "Path",
+          "status": "incomplete",
+          "realWorldApp": "Corporate SOC mein employees dwara report kiye gaye phishing emails ko triage karna. Email headers analyze karke sandbox mein malicious attachments execute karna."
+        },
+        {
+          "id": "thm-network-traffic",
+          "title": "Network Traffic Analysis",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Snort rules likhkar network traffic mein anomalies detect karna. Agar attacker DNS packets ke through data chura raha hai, toh rules apply karke us traffic ko block karna."
+        },
+        {
+          "id": "thm-siem-triage",
+          "title": "SIEM Triage for SOC",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Lateral movement detect karna. Analyst alag computers ke Windows Event Logs correlate karke attacker ka timeline reconstruct karta hai ki intrusion kahan se shuru hua."
+        },
+        {
+          "id": "thm-malware-concepts",
+          "title": "Malware Concepts for SOC",
+          "platform": "TryHackMe",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Jab naya ransomware variant network pe attack karta hai, tab security team uske signature aur behavior ko analyze karti hai taaki wo aur na phaile."
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "title": "Phase 3: Primary Track - Offensive Security, Web Exploitation, and Bug Bounty",
+      "track": "primary",
+      "labs": [
+        {
+          "id": "htb-info-gathering",
+          "title": "Information Gathering",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Main website attack karne se pehle attack surface expand karna. Forgotten dev subdomains bina authentication ke dhundhna aur system mein entry lena."
+        },
+        {
+          "id": "htb-xss",
+          "title": "Cross-site Scripting (XSS)",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "E-commerce customer support system mein malicious JS inject karna. Admin ticket open karega aur script admin ke session cookies chura legi ya rogue admin account bana degi."
+        },
+        {
+          "id": "htb-sqli",
+          "title": "SQL Injection (SQLi - MySQL)",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Unsanitized input field ka fayda utha ke customer database dump karna. Hashed passwords aur PII extract karna, ya database ke through server pe web shell likhna."
+        },
+        {
+          "id": "htb-ssrf",
+          "title": "Server-Side Request Forgery (SSRF)",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Vulnerable PDF generation endpoint ke through cloud metadata service (169.254.169.254) se temporary IAM credentials extract karna, jo internal cloud infra tak access de dega."
+        },
+        {
+          "id": "htb-cmd-injection",
+          "title": "Command Injection",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Corporate router ke web interface mein malicious Linux commands append karke reverse shell gain karna aur direct OS control lena."
+        },
+        {
+          "id": "htb-login-brute",
+          "title": "Login Brute Forcing",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Target organization ke employees par targeted dictionary attack karna. Social engineering data se custom lists banakar corporate VPN portals pe credential stuffing perform karna."
+        },
+        {
+          "id": "htb-ssti",
+          "title": "Server Side Template Injection (SSTI)",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Modern web frameworks ke templating engines ka misuse karke RCE execute karna, jisse company ka database aur internal network compromise ho jaye."
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "title": "Phase 4: Advanced Red Teaming and Active Directory Exploitation",
+      "track": "primary",
+      "labs": [
+        {
+          "id": "redteam-initial-access",
+          "title": "Initial Access",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Highly targeted spear-phishing campaign design karna jo MFA ko bypass kare. AiTM frameworks use karke session tokens churana aur employee inbox access karna."
+        },
+        {
+          "id": "redteam-privesc",
+          "title": "Post Compromise & Privilege Escalation",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Receptionist workstation par foothold milne ke baad Living off the Land tools se local credentials harvest karna aur memory dumps extract karke internal servers ki taraf badhna."
+        },
+        {
+          "id": "redteam-ad-exploit",
+          "title": "Active Directory Exploitation",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Kerberoasting, Pass-the-Hash, ya Golden Ticket attacks karke standard user se Domain Administrator tak privilege escalate karna, jisse pure network par control mil sake."
+        },
+        {
+          "id": "redteam-evasion-c2",
+          "title": "Evasion & C2",
+          "platform": "HackTheBox",
+          "type": "Lab",
+          "status": "incomplete",
+          "realWorldApp": "Target network mein long-term, stealthy persistence banaye rakhna. C2 traffic ko regular HTTPS ya DNS traffic jaisa dikha kar obfuscate karna taaki Blue Team ke tools dhokha kha jayein."
+        }
+      ]
+    }
+  ]
+}

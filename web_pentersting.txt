@@ -1,0 +1,91 @@
+Task 3: Web Application Security & Penetration Testing
+
+Intern Name: Pradeep Gusain
+
+Offer Letter ID: [Aapka Offer Letter ID Yahan Likhein]
+
+Internship Program: Cybersecurity & Ethical Hacking
+
+Organization: ApexPlanet Software Pvt. Ltd.
+
+1. Project Overview
+
+The objective of Task 3 is to identify, exploit, and mitigate common web application vulnerabilities listed in the OWASP Top 10. This task involves hands-on practice with tools like Burp Suite and vulnerable environments like DVWA (Damn Vulnerable Web App).
+
+2. Lab Environment Setup
+
+To perform web security testing safely, I configured the following environment:
+
+Target: DVWA (Running on a local server/Virtual Machine).
+
+Interception Proxy: Burp Suite Professional/Community Edition.
+
+Browser Configuration: Configured Firefox with FoxyProxy to route traffic through Burp Suite (127.0.0.1:8080).
+
+3. Vulnerability Analysis & Exploitation
+
+A. SQL Injection (SQLi)
+
+Discovery: Found a vulnerable input field in the 'User ID' lookup section.
+
+Exploitation: Used the payload ' OR '1'='1 to bypass authentication and extract all user records from the database.
+
+Impact: Unauthorized access to sensitive user data.
+
+Mitigation (The Fix): Use Prepared Statements (Parameterized Queries) instead of direct string concatenation in SQL queries.
+
+[Insert Screenshot of SQLi Bypass and Data Leak here]
+
+B. Cross-Site Scripting (XSS) - Reflected & Stored
+
+Discovery: Observed that the application does not sanitize user input before rendering it on the page.
+
+Exploitation: Injected a simple script <script>alert('XSS_Vulnerable')</script> which executed in the browser.
+
+Impact: Session hijacking via cookie theft.
+
+Mitigation (The Fix): Implement Output Encoding and use Content Security Policy (CSP) headers to block malicious scripts.
+
+[Insert Screenshot of XSS Alert Popup here]
+
+C. Cross-Site Request Forgery (CSRF)
+
+Discovery: The password change functionality lacked anti-CSRF tokens.
+
+Exploitation: Crafted a malicious HTML form that, when clicked by an authenticated user, silently changes their password.
+
+Mitigation (The Fix): Implement Unique Anti-CSRF Tokens for every state-changing request.
+
+[Insert Screenshot of Burp Suite CSRF PoC Generator here]
+
+D. File Inclusion (LFI/RFI)
+
+Discovery: The page parameter was susceptible to traversing local files.
+
+Exploitation: Accessed sensitive system files using ../../../../etc/passwd.
+
+Mitigation (The Fix): Use a whitelist of allowed file names and avoid passing user input directly to file system APIs.
+
+4. Advanced Tooling: Burp Suite Features
+
+In this task, I demonstrated the use of advanced Burp Suite features:
+
+Proxy & Intercept: Captured and modified HTTP requests before they reached the server.
+
+Repeater: Manually replayed modified requests to test server responses for different payloads.
+
+Intruder: Performed automated fuzzing to discover hidden parameters and directories.
+
+[Insert Screenshot of Burp Suite Repeater/Intruder in action here]
+
+5. Security Header Analysis
+
+Used securityheaders.com or browser tools to analyze the security headers of a target site.
+
+Missing Headers: X-Frame-Options, HSTS, X-Content-Type-Options.
+
+Recommendation: Enable these headers to prevent clickjacking and protocol downgrade attacks.
+
+6. Conclusion
+
+Task 3 provided a deep understanding of how web applications are attacked and defended. By exploiting vulnerabilities in a controlled environment (DVWA) and implementing the corresponding fixes, I have gained the skills necessary to perform web application penetration testing.
